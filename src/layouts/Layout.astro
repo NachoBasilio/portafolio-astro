@@ -1,32 +1,17 @@
 ---
-
+//Todo lo que se ejecuta aca va al servidor
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content="{Astro.generator}" /> <!-- Asegúrate de que {Astro.generator} sea reemplazado con un valor real -->
-		<title>Portafolio</title>
-	</head>
-	<body class="bg-aguara-400 dark:bg-aguara-950">
-		<button id="dark-mode-toggle">Activar/Desactivar Modo Oscuro</button>
-		<slot></slot> <!-- Debes proporcionar contenido dentro de la etiqueta <slot> -->
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
 	<script>
-		let isDarkMode = false;
-	  
-		function toggleDarkMode() {
-		  isDarkMode = !isDarkMode;
-		  document.documentElement.classList.toggle('dark', isDarkMode);
-		}
-
-		document.getElementById('dark-mode-toggle')?.addEventListener('click', toggleDarkMode);
+		//Todo lo que se ejecuta aca va al cliente
 	</script>
+</body>
 </html>
-<style is="global">
-/* Aquí deberías proporcionar estilos CSS si es necesario */
-</style>
