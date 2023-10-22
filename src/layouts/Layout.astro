@@ -1,13 +1,38 @@
 ---
 import Header from "../components/Header.astro"
+const {title} = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¡Hola a todos! Soy Nacho, un apasionado del desarrollo web y la tecnología en general, con especialización en JavaScript, React y Node.">
+    <meta name="keywords" content="desarrollo web, JavaScript, React, Node, tecnología, portafolio, Ignacio Basilio">
+    <meta name="author" content="Ignacio Basilio">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@IgnaDev">
+    <meta name="twitter:title" content="IgnaDev - Portafolio de Ignacio Basilio">
+    <meta name="twitter:description" content="¡Bienvenidos a mi portafolio! Soy un apasionado del desarrollo web y la tecnología. Muestra mis proyectos y habilidades en JavaScript, React y Node.">
+    <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1689782778802421761/aOe_qvxS_400x400.jpg">
+
+    <!-- Open Graph para Facebook -->
+    <meta property="og:title" content="IgnaDev - Portafolio de Ignacio Basilio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="URL de tu página">
+    <meta property="og:description" content="¡Bienvenidos a mi portafolio! Soy un apasionado del desarrollo web y la tecnología. Muestra mis proyectos y habilidades en JavaScript, React y Node.">
+    <meta property="og:image" content="https://i.ibb.co/2309kV7/perfil.jpg">
+    <meta property="og:site_name" content="IgnaDev">
+    <meta property="article:publisher" content="URL de tu perfil de Facebook">
+
+    <!-- Favicon (icono de la pestaña del navegador) -->
+    <link rel="icon" href="https://i.ibb.co/2309kV7/perfil.jpg" type="image/x-icon">
+
+    <title>IgnaDev - {title}</title>
 </head>
 <body class="dark:bg-aguara-1000">
 	<Header></Header>
