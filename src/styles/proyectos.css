@@ -6,13 +6,9 @@
     justify-content: center;
 }
 
-.titulo-proyecto{
-    width: 350px;
-}
+
 
 .imagen-proyectos{
     background-size: cover;
-    background-position: 0px 0px; 
 }
-
 
