@@ -10,11 +10,11 @@ export default function Parrafo({ parrafos }) {
   return (
     <div>
       {verMas ? (
-        parrafos.map((parrafos, index) => <p className='mt-5 dark:text-zinc-100' key={index}>{parrafos}</p>)
+        parrafos.map((parrafos, index) => <p className='mt-5 dark:text-zinc-100 tracking-wide text-xl' key={index}>{parrafos}</p>)
       ) : (
-        <p className='mt-5 dark:text-zinc-100'>{parrafos[0].substring(0, 150)}...</p>
+        <p className='mt-5 dark:text-zinc-100 tracking-wide text-xl'>{parrafos[0].substring(0, 150)}...</p>
       )}
-      <button className='text-aguara-600 mt-5' onClick={handleClick}>
+      <button className='text-aguara-600 mt-5 tracking-wide' onClick={handleClick}>
         {verMas ? 'Ver menos' : 'Ver más...'}
       </button>
     </div>
