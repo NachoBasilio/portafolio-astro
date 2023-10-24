@@ -10,7 +10,7 @@ const Proyectos = [
     },
     {
         titulo: "Galeria de Imagenes",
-        descripcion: "Este repositorio contiene un proyecto de Galería de Imágenes desarrollado con React, donde se utiliza react-router-dom para la navegación, useReducer y useContext",
+        descripcion: "Este repositorio contiene un proyecto de Galería de Imágenes desarrollado con React, donde se utiliza react-router-dom para la navegación, useReducer y useContext.",
         imagen:"https://i.ibb.co/FVJq35h/Captura-desde-2023-10-24-18-51-21.png",
         link:"https://fastidious-cascaron-e3eaab.netlify.app/"
 
@@ -34,18 +34,55 @@ const Proyectos = [
         link: "https://github.com/NachoBasilio/news-react-time"
     }
 ]
+const ProyectosCursos = [
+    {
+        titulo: "Planificador de gastos",
+        descripcion: "Este repositorio contiene un proyecto de Planificador de Gastos desarrollado con React.",
+        imagen:"https://i.ibb.co/WzpCcX2/Captura-desde-2023-10-24-20-34-04.png",
+        link:"https://presupuestoreactbasilio.netlify.app/"
+    },
+    {
+        titulo: "Seguimiento Veterinario",
+        descripcion: "Este repositorio contiene un proyecto de Seguimiento Veterinario desarrollado con React.",
+        imagen:"https://i.ibb.co/2d6HZpC/Captura-desde-2023-10-24-20-37-54.png",
+        link:"https://veterinariabasilio.netlify.app/"
+    },
+]
 ---
 
 <Layout>
+    <div class="container m-auto w-1/2 flex flex-wrap justify-center my-4">
+        <h2 class="text-2xl tracking-wide dark:text-zinc-200 font-bold">Proyectos Personales</h2>
+    </div>
     
     <div class="container m-auto lg:w-1/2 w-auto md:flex md:flex-wrap md:justify-center">
-        {Proyectos.map((proyecto)=>(
+        {Proyectos.map((proyecto) => (
+            <div class="md:w-1/3 w-auto mx-2">
+                <Proyecto
+                    titulo={proyecto.titulo}
+                    descripcion={proyecto.descripcion}
+                    imagen={proyecto.imagen}
+                    link={proyecto.link}
+                />
+            </div>
+        ))}
+    </div>
+
+    <div class="container m-auto w-1/2 flex flex-wrap justify-center my-4">
+        <h2 class="text-2xl tracking-wide dark:text-zinc-200 font-bold">Proyectos Cursos</h2>
+    </div>
+
+
+    <div class="container m-auto lg:w-1/2 w-auto md:flex md:flex-wrap md:justify-center">
+        {ProyectosCursos.map((proyecto)=>(
             <div class="md:w-1/3 w-auto mx-2">
                 <Proyecto titulo={proyecto.titulo} descripcion={proyecto.descripcion} imagen={proyecto.imagen} link={proyecto.link}/>
             </div>
         ))}
-        
     </div> 
+
+  
+
     <div class="container m-auto w-1/2 flex flex-wrap justify-center my-4">
         <a class="text-aguara-600 text-xl tracking-wide" href="/">Volver a home</a>
     </div>
