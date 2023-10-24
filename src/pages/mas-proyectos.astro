@@ -22,6 +22,12 @@ const Proyectos = [
         link:"https://jazzy-taiyaki-6702af.netlify.app/"
     },
     {
+        titulo: "Hoy cocino",
+        descripcion: "Esta es una aplicación web para guardar tus comidas y sortear que comer. ¡Entra ahora!",
+        imagen:"https://i.ibb.co/2vf4F89/Captura-desde-2023-10-24-20-10-06.png",
+        link:"https://ignadev.online/"
+    },
+    {
         titulo: "News App",
         descripcion: "Esta es una pequeña aplicación de noticias construida utilizando React y Redux. La aplicación se conecta a una API de noticias para obtener las últimas noticias y permite a los usuarios guardar sus noticias favoritas.",
         imagen:"https://i.ibb.co/M6RkBCJ/Captura-desde-2023-10-24-18-53-30.png",
@@ -32,9 +38,9 @@ const Proyectos = [
 
 <Layout>
     
-    <div class="container m-auto w-1/2 flex flex-wrap justify-center">
+    <div class="container m-auto lg:w-1/2 w-auto md:flex md:flex-wrap md:justify-center">
         {Proyectos.map((proyecto)=>(
-            <div class="w-1/3 mx-2">
+            <div class="md:w-1/3 w-auto mx-2">
                 <Proyecto titulo={proyecto.titulo} descripcion={proyecto.descripcion} imagen={proyecto.imagen} link={proyecto.link}/>
             </div>
         ))}
