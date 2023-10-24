@@ -4,15 +4,27 @@ const Proyectos = [
 {
     titulo: "Rubrica Pokemon",
     descripcion: "Guarda tus equipos de Pokémon de cada juego y generación en esta página. ¡Entra ahora!",
-    imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/2052px-Pok%C3%A9_Ball_icon.svg.png",
+    imagen: "https://i.ibb.co/XWRX9nx/Captura-desde-2023-10-24-18-51-50.png",
     link: "https://ignadev.store/"
 },
 {
-    titulo: "News App 📰",
-    descripcion: "Esta es una pequeña aplicación de noticias construida utilizando React y Redux. La aplicación se conecta a una API de noticias para obtener las últimas noticias y permite a los usuarios guardar sus noticias favoritas.",
-    imagen:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/The_Indianapolis_Star%2C_2011.jpg/1200px-The_Indianapolis_Star%2C_2011.jpg",
-    link: "https://github.com/NachoBasilio/news-react-time"
+    titulo: "Galeria de Imagenes",
+    descripcion: "Este repositorio contiene un proyecto de Galería de Imágenes desarrollado con React, donde se utiliza react-router-dom para la navegación, useReducer y useContext",
+    imagen:"https://i.ibb.co/FVJq35h/Captura-desde-2023-10-24-18-51-21.png",
+    link:"https://fastidious-cascaron-e3eaab.netlify.app/"
 
+},
+{
+    titulo: "Portafolio Aguará Guazú",
+    descripcion: "Explora el portafolio de desarrollo web de Aguará Guazú Programador. Descubre proyectos, habilidades y logros en el mundo de la programación y diseño web. Todo con Astro y TailwindCSS.",
+    imagen:"https://i.ibb.co/xGGvg1H/Captura-desde-2023-10-24-18-57-29.png",
+    link:"https://jazzy-taiyaki-6702af.netlify.app/"
+},
+{
+    titulo: "News App",
+    descripcion: "Esta es una pequeña aplicación de noticias construida utilizando React y Redux. La aplicación se conecta a una API de noticias para obtener las últimas noticias y permite a los usuarios guardar sus noticias favoritas.",
+    imagen:"https://i.ibb.co/M6RkBCJ/Captura-desde-2023-10-24-18-53-30.png",
+    link: "https://github.com/NachoBasilio/news-react-time"
 }
 ]
 ---
@@ -20,7 +32,7 @@ const Proyectos = [
 
 
 <div class="container m-auto p-4 md:w-1/2 lg:w-1/4">
-    <h3 class="text-4xl font-bold pl-1 dark:text-zinc-100">Mis proyectos:</h3>
+    <h3 class="text-4xl font-bold pl-1 dark:text-zinc-100 flex flex-col">Mis proyectos:</h3>
     {
         Proyectos.map((proyecto) => {
             return <Proyecto titulo={proyecto.titulo} descripcion={proyecto.descripcion} imagen={proyecto.imagen} link={proyecto.link} />
