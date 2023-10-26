@@ -16,7 +16,7 @@ export default function Proyecto({ titulo, imagen, link }) {
   }
 
   return (
-    <div className={grid(titulo) + " mt-10 md:m-0 proyecto-container"} >
+    <div className={grid(titulo) + " mt-10 md:m-0 proyecto-container transition"} >
       <a
         href={link}
         target="_blank"
@@ -26,7 +26,7 @@ export default function Proyecto({ titulo, imagen, link }) {
       <div className="titulo-proyecto grow h-80">
         <h3 className="text-xl m-auto pl-4 pt-2 font-bold tracking-wider">{titulo}</h3>
       </div>
-      <div className="imagen-proyectos m-auto rounded-b bg-zinc-100 dark:bg-zinc-800 h-0" style={divStyle}></div>
+      <div className="imagen-proyectos m-auto rounded-b bg-zinc-100 dark:bg-zinc-800 h-20" style={divStyle}></div>
       </a>
     </div>
   ); 
