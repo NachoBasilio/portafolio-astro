@@ -3,10 +3,12 @@
 ---
 
 <header class="container m-auto mt-10"> 
-    <div class="flex flex-col m-auto ">
-        <h1 class="text-6xl m-auto font-bold text-gray-800 md:m-auto dark:text-zinc-100 sm:m-auto">IgnaDev</h1>
-        <h1 class="text-xl m-auto pl-20 font-bold text-gray-900 dark:text-zinc-50 mt-1">Desarrollador web</h1>
-        <div class="Contenedor-Perfil border-4 border-aguara-950 dark:border-aguara-800" id="perfil"></div>
+    <div class="flex md:flex-row flex-col aling-center justify-center">
+        <div class="flex flex-col texto m-auto md:m-0">
+            <h1 class="text-6xl font-bold text-gray-800 dark:text-zinc-100">IgnaDev</h1>
+            <h2 class="text-xl pl-20 font-bold text-gray-900 dark:text-zinc-50">Desarrollador web</h2>
+        </div>
+        <div class="Contenedor-Perfil border-4 border-aguara-950 dark:border-aguara-800 m-auto my-5 md:m-0" id="perfil"></div>
     </div>
 </header>
 
@@ -30,13 +32,19 @@
     height: 200px;
     background-size: cover;
     border-radius: 50%;
-    margin: 20px auto;
     transition: background-image 2s ease; 
 }
 
 .Contenedor-Perfil {
     background-image: url("http://imgfz.com/i/kPm9alD.jpeg");
 }
+@media (min-width: 768px) { 
+    .texto  {
+        margin-top: 50px;
+        margin-right: 50px;
+    }
+}
+
 
 .Contenedor-Twitter {
     background-image: url("https://pbs.twimg.com/profile_images/1689782778802421761/aOe_qvxS_400x400.jpg");
