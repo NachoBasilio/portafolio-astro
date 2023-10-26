@@ -2,10 +2,22 @@
 import Proyecto from "./Proyecto";
 const Proyectos = [
 {
+    titulo: "Hoy cocino",
+    descripcion: "Esta es una aplicación web para guardar tus comidas y sortear que comer. ¡Entra ahora!",
+    imagen:"https://imgfz.com/i/YNlKCyp.png",
+    link:"https://ignadev.online/"
+},
+{
     titulo: "Rubrica Pokemon",
     descripcion: "Guarda tus equipos de Pokémon de cada juego y generación en esta página. ¡Entra ahora!",
     imagen: "https://imgfz.com/i/6g9Diha.png",
     link: "https://ignadev.store/"
+},
+{
+    titulo: "Port. AgGuazú",
+    descripcion: "Explora el portafolio de desarrollo web de Aguará Guazú Programador. Descubre proyectos, habilidades y logros en el mundo de la programación y diseño web. Todo con Astro y TailwindCSS.",
+    imagen:"https://imgfz.com/i/n4sxEaY.png",
+    link:"https://jazzy-taiyaki-6702af.netlify.app/"
 },
 {
     titulo: "Galeria de Imagenes",
@@ -13,12 +25,6 @@ const Proyectos = [
     imagen:"https://imgfz.com/i/1N6SpEi.png",
     link:"https://fastidious-cascaron-e3eaab.netlify.app/"
 
-},
-{
-    titulo: "Portafolio Aguará Guazú",
-    descripcion: "Explora el portafolio de desarrollo web de Aguará Guazú Programador. Descubre proyectos, habilidades y logros en el mundo de la programación y diseño web. Todo con Astro y TailwindCSS.",
-    imagen:"https://imgfz.com/i/n4sxEaY.png",
-    link:"https://jazzy-taiyaki-6702af.netlify.app/"
 },
 {
     titulo: "News App",
@@ -29,19 +35,15 @@ const Proyectos = [
 ]
 ---
 
-<div class="container md:m-auto ml-3 w-1/4 flex flex-wrap my-4">
-    <h3 class="text-4xl ml-2 font-bold dark:text-zinc-100">Algunos proyectos</h3>
+<div class="container m-auto md:w-1/2 mt-5 ">
+    <h3 class="text-4xl dark:text-zinc-100 text-left font-bold">Proyectos</h3>
 </div>
-<div class="container m-auto lg:w-1/2 w-auto md:flex md:flex-wrap md:justify-center">
-    
-    <div class="container m-auto w-auto md:flex md:flex-wrap md:justify-center">
-        {Proyectos.map((proyecto)=>(
-            <div class="md:w-1/3 w-auto mx-2">
-                <Proyecto titulo={proyecto.titulo} descripcion={proyecto.descripcion} imagen={proyecto.imagen} link={proyecto.link}/>
-            </div>
-        ))}
-        
-    </div> 
+
+<div class="grid md:grid-cols-2 lg:grid-cols-9 md:w-1/2 container m-auto">
+  
+    {Proyectos.map((proyecto)=>(
+        <Proyecto titulo={proyecto.titulo} imagen={proyecto.imagen} link={proyecto.link}/>
+    ))}
 
 </div>
 <div class="container m-auto w-1/2 flex flex-wrap justify-center my-4">

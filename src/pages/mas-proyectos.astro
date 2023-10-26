@@ -28,10 +28,10 @@ const Proyectos = [
         link:"https://ignadev.online/"
     },
     {
-    titulo: "News App",
-    descripcion: "Esta es una pequeña aplicación de noticias construida utilizando React y Redux. La aplicación se conecta a una API de noticias para obtener las últimas noticias y permite a los usuarios guardar sus noticias favoritas.",
-    imagen:"https://imgfz.com/i/VMGvCsE.png",
-    link: "https://github.com/NachoBasilio/news-react-time"
+        titulo: "News App",
+        descripcion: "Esta es una pequeña aplicación de noticias construida utilizando React y Redux. La aplicación se conecta a una API de noticias para obtener las últimas noticias y permite a los usuarios guardar sus noticias favoritas.",
+        imagen:"https://imgfz.com/i/VMGvCsE.png",
+        link: "https://github.com/NachoBasilio/news-react-time"
     }
 ]
 const ProyectosCursos = [
@@ -60,7 +60,6 @@ const ProyectosCursos = [
             <div class="md:w-1/4 w-auto mx-2">
                 <Proyecto
                     titulo={proyecto.titulo}
-                    descripcion={proyecto.descripcion}
                     imagen={proyecto.imagen}
                     link={proyecto.link}
                 />
@@ -76,7 +75,7 @@ const ProyectosCursos = [
     <div class="container m-auto lg:w-2/3 w-auto md:flex md:flex-wrap md:justify-center">
         {ProyectosCursos.map((proyecto)=>(
             <div class="md:w-1/4 w-auto mx-2">
-                <Proyecto titulo={proyecto.titulo} descripcion={proyecto.descripcion} imagen={proyecto.imagen} link={proyecto.link}/>
+                <Proyecto titulo={proyecto.titulo}imagen={proyecto.imagen} link={proyecto.link}/>
             </div>
         ))}
     </div> 
