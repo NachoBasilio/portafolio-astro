@@ -12,3 +12,34 @@
     background-size: cover;
     width: 100%;
 }
+
+.proyecto-container {
+    width: 100%;
+    overflow: hidden;
+    
+  }
+  
+  .proyecto-container:hover {
+    transition: height 1s ease-in-out;
+  }
+  
+  .proyecto-container:hover .titulo-proyecto {
+    height: 100%;
+    transition: height 1s ease-in-out;
+  }
+  
+  .titulo-proyecto {
+    height: 100%;
+    transition: height 1s ease-in-out;
+  }
+  
+  .imagen-proyectos {
+    height: 15rem;
+    visibility: hidden;
+  }
+  
+  .proyecto-container:hover .imagen-proyectos {
+    visibility: visible;
+    transition: height 1s ease-in-out;
+  }
+  

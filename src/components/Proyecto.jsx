@@ -16,19 +16,18 @@ export default function Proyecto({ titulo, imagen, link }) {
   }
 
   return (
-    <div className={grid(titulo) + " mt-10 md:m-0"} >
+    <div className={grid(titulo) + " mt-10 md:m-0 proyecto-container"} >
       <a
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex flex-col border-aguara-700 dark:text-zinc-100 bg-aguara-300 dark:bg-aguara-900 rounded-xl m-auto"
+        className="flex flex-col border-aguara-700 dark:text-zinc-100 bg-aguara-300 dark:bg-aguara-900 rounded m-auto"
       >
-      <div className="titulo-proyecto grow">
+      <div className="titulo-proyecto grow h-80">
         <h3 className="text-xl m-auto pl-4 pt-2 font-bold tracking-wider">{titulo}</h3>
       </div>
-      <div className="imagen-proyectos m-auto rounded-b bg-zinc-100 h-60 dark:bg-zinc-800" style={divStyle}></div>
+      <div className="imagen-proyectos m-auto rounded-b bg-zinc-100 dark:bg-zinc-800 h-0" style={divStyle}></div>
       </a>
     </div>
-  );
-En 
+  ); 
 }
