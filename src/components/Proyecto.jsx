@@ -29,12 +29,11 @@ export default function Proyecto({ titulo, imagen, link, logos  }) {
       <div className="imagen-proyectos m-auto rounded-b bg-zinc-100 dark:bg-zinc-800 h-20" style={divStyle}></div>
       </a>
       <div className="logos">
-      {
-        logos.map((logo, index)=>(
-          <img key={index} src={logo} alt="" className="w-10 h-10 m-2"/>
-        ))
-      }
+          {logos && Array.isArray(logos) && logos.map((logo, index) => (
+            <img key={index} src={logo} alt="" className="w-10 h-10 m-2" />
+          ))}
       </div>
+
     </div>
   ); 
 }
