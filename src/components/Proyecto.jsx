@@ -1,6 +1,6 @@
 import "../styles/proyectos.css";
 
-export default function Proyecto({ titulo, imagen, link }) {
+export default function Proyecto({ titulo, imagen, link, logos  }) {
   const divStyle = {
     backgroundImage: `url(${imagen})`,
   };
@@ -29,9 +29,11 @@ export default function Proyecto({ titulo, imagen, link }) {
       <div className="imagen-proyectos m-auto rounded-b bg-zinc-100 dark:bg-zinc-800 h-20" style={divStyle}></div>
       </a>
       <div className="logos">
-      <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="" />
-      <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="" />
-      <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="" />
+      {
+        logos.map((logo, index)=>(
+          <img key={index} src={logo} alt="" className="w-10 h-10 m-2"/>
+        ))
+      }
       </div>
     </div>
   ); 

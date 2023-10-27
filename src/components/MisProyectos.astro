@@ -5,32 +5,38 @@ const Proyectos = [
     titulo: "Hoy cocino",
     descripcion: "Esta es una aplicación web para guardar tus comidas y sortear que comer. ¡Entra ahora!",
     imagen:"https://imgfz.com/i/YNlKCyp.png",
-    link:"https://ignadev.online/"
+    link:"https://ignadev.online/",
+    logos:["https://www.svgrepo.com/show/503536/react.svg"]
 },
 {
     titulo: "Rubrica Pokemon",
     descripcion: "Guarda tus equipos de Pokémon de cada juego y generación en esta página. ¡Entra ahora!",
     imagen: "https://imgfz.com/i/6g9Diha.png",
-    link: "https://ignadev.store/"
+    link: "https://ignadev.store/",
+    logos:["https://www.svgrepo.com/show/306891/typescript.svg"]
+    
 },
 {
     titulo: "Port. AgGuazú",
     descripcion: "Explora el portafolio de desarrollo web de Aguará Guazú Programador. Descubre proyectos, habilidades y logros en el mundo de la programación y diseño web. Todo con Astro y TailwindCSS.",
     imagen:"https://imgfz.com/i/n4sxEaY.png",
-    link:"https://jazzy-taiyaki-6702af.netlify.app/"
+    link:"https://jazzy-taiyaki-6702af.netlify.app/",
+    logos:["https://www.svgrepo.com/show/373446/astro.svg"]
 },
 {
     titulo: "Galeria de Imagenes",
     descripcion: "Este repositorio contiene un proyecto de Galería de Imágenes desarrollado con React, donde se utiliza react-router-dom para la navegación, useReducer y useContext",
     imagen:"https://imgfz.com/i/1N6SpEi.png",
-    link:"https://fastidious-cascaron-e3eaab.netlify.app/"
+    link:"https://fastidious-cascaron-e3eaab.netlify.app/",
+    logos:["https://www.svgrepo.com/show/503536/react.svg"]
 
 },
 {
     titulo: "News App",
     descripcion: "Esta es una pequeña aplicación de noticias construida utilizando React y Redux. La aplicación se conecta a una API de noticias para obtener las últimas noticias y permite a los usuarios guardar sus noticias favoritas.",
     imagen:"https://imgfz.com/i/VMGvCsE.png",
-    link: "https://github.com/NachoBasilio/news-react-time"
+    link: "https://github.com/NachoBasilio/news-react-time",
+    logos:["https://www.svgrepo.com/show/503536/react.svg", "https://www.svgrepo.com/show/394395/redux.svg"]
 }
 ]
 ---
@@ -42,7 +48,7 @@ const Proyectos = [
 <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-2 md:w-1/2 container m-auto ">
   
     {Proyectos.map((proyecto)=>(
-        <Proyecto titulo={proyecto.titulo} imagen={proyecto.imagen} link={proyecto.link}/>
+        <Proyecto titulo={proyecto.titulo} imagen={proyecto.imagen} link={proyecto.link} logos={proyecto.logos}/>
     ))}
 
 </div>
