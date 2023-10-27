@@ -30,7 +30,7 @@ export default function Proyecto({ titulo, imagen, link, logos  }) {
       </a>
       <div className="logos">
           {logos && Array.isArray(logos) && logos.map((logo, index) => (
-            <img key={index} src={logo} alt="" className="w-10 h-10 m-2" />
+            <img key={index} src={logo} alt="" className="w-22 h-22 m-2" />
           ))}
       </div>
 
