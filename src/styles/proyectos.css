@@ -6,6 +6,10 @@
     justify-content: center;
 }
 
+.contenedorCard{
+  position: relative;
+}
+
 
 
 .imagen-proyectos{
@@ -16,30 +20,144 @@
 .proyecto-container {
     width: 100%;
     overflow: hidden;
-    
+    animation-name: su;
   }
   
   .proyecto-container:hover {
-    transition: height 1s ease-in-out;
+    animation-name: subida;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
   
   .proyecto-container:hover .titulo-proyecto {
     height: 100%;
     transition: height 1s ease-in-out;
+    padding: 0px;
+    transition: height 0.1s ease-in-out; /* Agregamos una transición para el contenedor */
+
   }
   
   .titulo-proyecto {
     height: 100%;
     transition: height 1s ease-in-out;
+    transition: height 0.1s ease-in-out, padding 0.5s; /* Agregamos transición para el título */
+
   }
   
   .imagen-proyectos {
     height: 15rem;
-    visibility: hidden;
-  }
-  
-  .proyecto-container:hover .imagen-proyectos {
     visibility: visible;
-    transition: height 1s ease-in-out;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 1s ease-in-out; /* Agregamos transición para la imagen */
   }
   
+  .logos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .logos img{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+  }
+
+  .proyecto-container:hover .imagen-proyectos {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .proyecto-container:hover .logos{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 1s ease-in-out; 
+  }
+
+  @media (min-width: 768px) {
+    .contenedor{
+      height: 200px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .contenedorCard{
+    position: relative;
+  }
+  
+  
+  
+  .imagen-proyectos{
+      background-size: cover;
+      width: 100%;
+  }
+  
+  .proyecto-container {
+      width: 100%;
+      overflow: hidden;
+      animation-name: su;
+    }
+    
+    .proyecto-container:hover {
+      animation-name: subida;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    
+    .proyecto-container:hover .titulo-proyecto {
+      height: 100%;
+      transition: height 1s ease-in-out;
+      padding: 0px;
+      transition: height 0.1s ease-in-out; /* Agregamos una transición para el contenedor */
+  
+    }
+    
+    .titulo-proyecto {
+      height: 100%;
+      transition: height 1s ease-in-out;
+      transition: height 0.1s ease-in-out, padding 0.5s; /* Agregamos transición para el título */
+  
+    }
+    
+    .imagen-proyectos {
+      height: 15rem;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, visibility 1s ease-in-out; /* Agregamos transición para la imagen */
+    }
+    
+    .logos{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .logos img{
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+    }
+  
+    .proyecto-container:hover .imagen-proyectos {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .proyecto-container:hover .logos{
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, visibility 1s ease-in-out; 
+    }
+}
