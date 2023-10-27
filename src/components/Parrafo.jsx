@@ -8,7 +8,7 @@ export default function Parrafo({ parrafos }) {
   };
 
   return (
-    <div class="mx-2">
+    <div className="mx-2">
       {verMas ? (
         parrafos.map((parrafos, index) => <p className='mt-5 dark:text-zinc-100 tracking-wide' key={index}>{parrafos}</p>)
       ) : (
