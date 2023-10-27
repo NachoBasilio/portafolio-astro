@@ -48,7 +48,7 @@
     height: 15rem;
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.3s ease-in-out, visibility 1s ease-in-out; /* Agregamos transición para la imagen */
+    transition: opacity 0.3s ease-in-out, visibility 1s ease-in-out; 
   }
   
   .logos{
