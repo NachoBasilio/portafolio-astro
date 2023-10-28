@@ -2,50 +2,58 @@
 import Layout from "../layouts/Layout.astro";
 import Proyecto from "../components/Proyecto.jsx";
 const Proyectos = [
-    {
-        titulo: "Rubrica Pokemon",
-        descripcion: "Guarda tus equipos de Pokémon de cada juego y generación en esta página. ¡Entra ahora!",
-        imagen: "https://imgfz.com/i/6g9Diha.png",
-        link: "https://ignadev.store/"
-    },
-    {
-        titulo: "Galeria de Imagenes",
-        descripcion: "Este repositorio contiene un proyecto de Galería de Imágenes desarrollado con React, donde se utiliza react-router-dom para la navegación, useReducer y useContext",
-        imagen:"https://imgfz.com/i/1N6SpEi.png",
-        link:"https://fastidious-cascaron-e3eaab.netlify.app/"
+{
+    titulo: "Hoy cocino",
+    descripcion: "Esta es una aplicación web para guardar tus comidas y sortear que comer. ¡Entra ahora!",
+    imagen:"https://imgfz.com/i/YNlKCyp.png",
+    link:"https://ignadev.online/",
+    logos:["https://www.svgrepo.com/show/503536/react.svg"]
+},
+{
+    titulo: "Rubrica Pokemon",
+    descripcion: "Guarda tus equipos de Pokémon de cada juego y generación en esta página. ¡Entra ahora!",
+    imagen: "https://imgfz.com/i/6g9Diha.png",
+    link: "https://ignadev.store/",
+    logos:["https://www.svgrepo.com/show/306891/typescript.svg"]
+    
+},
+{
+    titulo: "Port. AgGuazú",
+    descripcion: "Explora el portafolio de desarrollo web de Aguará Guazú Programador. Descubre proyectos, habilidades y logros en el mundo de la programación y diseño web. Todo con Astro y TailwindCSS.",
+    imagen:"https://imgfz.com/i/n4sxEaY.png",
+    link:"https://jazzy-taiyaki-6702af.netlify.app/",
+    logos:["https://www.svgrepo.com/show/373446/astro.svg"]
+},
+{
+    titulo: "Galeria de Imagenes",
+    descripcion: "Este repositorio contiene un proyecto de Galería de Imágenes desarrollado con React, donde se utiliza react-router-dom para la navegación, useReducer y useContext",
+    imagen:"https://imgfz.com/i/1N6SpEi.png",
+    link:"https://fastidious-cascaron-e3eaab.netlify.app/",
+    logos:["https://www.svgrepo.com/show/503536/react.svg"]
 
-    },
-    {
-        titulo: "Portafolio Aguará Guazú",
-        descripcion: "Explora el portafolio de desarrollo web de Aguará Guazú Programador. Descubre proyectos, habilidades y logros en el mundo de la programación y diseño web. Todo con Astro y TailwindCSS.",
-        imagen:"https://imgfz.com/i/n4sxEaY.png",
-        link:"https://jazzy-taiyaki-6702af.netlify.app/"
-    },
-    {
-        titulo: "Hoy cocino",
-        descripcion: "Esta es una aplicación web para guardar tus comidas y sortear que comer. ¡Entra ahora!",
-        imagen:"https://imgfz.com/i/YNlKCyp.png",
-        link:"https://ignadev.online/"
-    },
-    {
-        titulo: "News App",
-        descripcion: "Esta es una pequeña aplicación de noticias construida utilizando React y Redux. La aplicación se conecta a una API de noticias para obtener las últimas noticias y permite a los usuarios guardar sus noticias favoritas.",
-        imagen:"https://imgfz.com/i/VMGvCsE.png",
-        link: "https://github.com/NachoBasilio/news-react-time"
-    }
+},
+{
+    titulo: "News App",
+    descripcion: "Esta es una pequeña aplicación de noticias construida utilizando React y Redux. La aplicación se conecta a una API de noticias para obtener las últimas noticias y permite a los usuarios guardar sus noticias favoritas.",
+    imagen:"https://imgfz.com/i/VMGvCsE.png",
+    link: "https://github.com/NachoBasilio/news-react-time",
+    logos:["https://www.svgrepo.com/show/503536/react.svg", "https://www.svgrepo.com/show/394395/redux.svg"]
+}
 ]
 const ProyectosCursos = [
     {
         titulo: "Planificador de gastos",
         descripcion: "Este repositorio contiene un proyecto de Planificador de Gastos desarrollado con React.",
         imagen:"https://imgfz.com/i/fXAVRl3.png",
-        link:"https://presupuestoreactbasilio.netlify.app/"
+        link:"https://presupuestoreactbasilio.netlify.app/",
+        logos:["https://www.svgrepo.com/show/503536/react.svg"]
     },
     {
-        titulo: "Seguimiento Veterinario",
+        titulo: "Seg. Veterinario",
         descripcion: "Este repositorio contiene un proyecto de Seguimiento Veterinario desarrollado con React.",
         imagen:"https://imgfz.com/i/gTLVe3E.png",
-        link:"https://veterinariabasilio.netlify.app/"
+        link:"https://veterinariabasilio.netlify.app/",
+        logos:["https://www.svgrepo.com/show/503536/react.svg"]
     },
 ]
 ---
@@ -55,13 +63,14 @@ const ProyectosCursos = [
         <h2 class="text-4xl tracking-wide dark:text-zinc-200 font-bold">Proyectos Personales</h2>
     </div>
     
-    <div class="container m-auto lg:w-2/3 w-auto md:flex md:flex-wrap md:justify-center">
+    <div class="container m-auto lg:w-2/3 w-auto md:flex md:flex-wrap gap-4 md:justify-center">
         {Proyectos.map((proyecto) => (
             <div class="md:w-1/4 w-auto mx-2">
                 <Proyecto
                     titulo={proyecto.titulo}
                     imagen={proyecto.imagen}
                     link={proyecto.link}
+                    logos={proyecto.logos}
                 />
             </div>
         ))}
@@ -72,10 +81,10 @@ const ProyectosCursos = [
     </div>
 
 
-    <div class="container m-auto lg:w-2/3 w-auto md:flex md:flex-wrap md:justify-center">
+    <div class="container m-auto lg:w-2/3 w-auto md:flex md:flex-wrap  md:justify-center">
         {ProyectosCursos.map((proyecto)=>(
             <div class="md:w-1/4 w-auto mx-2">
-                <Proyecto titulo={proyecto.titulo}imagen={proyecto.imagen} link={proyecto.link}/>
+                <Proyecto titulo={proyecto.titulo}imagen={proyecto.imagen} link={proyecto.link} logos={proyecto.logos}/>
             </div>
         ))}
     </div> 
