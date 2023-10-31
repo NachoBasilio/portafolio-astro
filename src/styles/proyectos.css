@@ -10,11 +10,10 @@
   position: relative;
 }
 
-
-
 .imagen-proyectos{
     background-size: cover;
     width: 100%;
+     
 }
 
 .proyecto-container {
