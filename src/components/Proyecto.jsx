@@ -21,18 +21,19 @@ export default function Proyecto({ titulo, imagen, link, logos  }) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex flex-col border-aguara-700 dark:text-zinc-100 bg-aguara-300 dark:bg-aguara-900 rounded m-auto"
+        className="flex flex-col border-aguara-700 dark:text-zinc-900 font-bold bg-aguara-100 dark:bg-aguara-700 rounded m-auto"
       >
       <div className="titulo-proyecto grow h-80 m-auto">
-        <h3 className="text-xl m-auto pt-2 font-bold tracking-wider">{titulo}</h3>
+        <h3 className="text-xl m-auto pt-2  tracking-wider">{titulo}</h3>
       </div>
+      <hr class="h-px bg-gray-200 border-0 dark:bg-gray-800"/>
       <div className="imagen-proyectos m-auto rounded-b bg-zinc-100 dark:bg-zinc-800 h-20" style={divStyle}></div>
       </a>
       <div className="logos">
-          {logos && Array.isArray(logos) && logos.map((logo, index) => (
-            <img key={index} src={logo} alt="" className="w-22 h-22 m-2" />
-          ))}
-      </div>
+        {logos && Array.isArray(logos) && logos.map((logo, index) => (
+          <img key={index} src={logo} alt="" className="m-2" />
+        ))}
+      </div>  
 
     </div>
   ); 
