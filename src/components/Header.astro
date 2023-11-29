@@ -5,25 +5,30 @@
 <header class="container m-auto mt-10"> 
     <div class="flex md:flex-row flex-col aling-center gap-2 justify-center">
         <div class="flex flex-col texto m-auto md:m-0">
-            <h1 class="text-6xl font-bold text-gray-800 dark:text-zinc-100">IgnaDev</h1>
+            <h2 class="text-6xl font-bold text-gray-800 dark:text-zinc-100">IgnaDev</h2>
             <h2 class="text-xl pl-20 font-bold text-gray-900 dark:text-zinc-50">Desarrollador web</h2>
+            <h1 class="hidden">Ignacio Basilio</h1>
         </div>
-        <div class="Contenedor-Perfil border-4 border-aguara-950 dark:border-aguara-800 m-auto my-5 md:m-0" id="perfil"></div>
+        <a href="https://twitter.com/ignadev" target="_blank" class="Contenedor-Perfil border-4 border-aguara-950 dark:border-aguara-800 m-auto my-5 md:m-0" id="perfil"></a>
     </div>
 </header>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
     const profileContainer = document.getElementById("perfil");
+
+if (profileContainer instanceof HTMLAnchorElement) {
     const classNames = ["Contenedor-Perfil", "Contenedor-Twitter"];
+    const urls = ["https://twitter.com/ignadev", "https://twitter.com/AGJavaScriptero"]
     let currentClassIndex = 0;
 
     setInterval(function () {
-        profileContainer?.classList.remove(classNames[currentClassIndex]);
+        profileContainer.classList.remove(classNames[currentClassIndex]);
+        console.log(profileContainer)
         currentClassIndex = (currentClassIndex + 1) % classNames.length;
-        profileContainer?.classList.add(classNames[currentClassIndex]);
+        profileContainer.classList.add(classNames[currentClassIndex]);
+        profileContainer.href = urls[currentClassIndex]
     }, 5000); // Cambiar de clase cada 5 segundos (5000 ms)
-    });
+}
 </script>
 
 <style>
