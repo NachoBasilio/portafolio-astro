@@ -23,7 +23,6 @@ if (profileContainer instanceof HTMLAnchorElement) {
 
     setInterval(function () {
         profileContainer.classList.remove(classNames[currentClassIndex]);
-        console.log(profileContainer)
         currentClassIndex = (currentClassIndex + 1) % classNames.length;
         profileContainer.classList.add(classNames[currentClassIndex]);
         profileContainer.href = urls[currentClassIndex]
