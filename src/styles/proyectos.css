@@ -17,10 +17,9 @@
 }
 
 .proyecto-container {
-    width: 80%;
+    width: 100%;
     overflow: hidden;
     animation-name: su;
-    margin: 0 auto;
   }
   
   .proyecto-container:hover {
