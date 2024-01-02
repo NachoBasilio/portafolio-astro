@@ -16,7 +16,7 @@ export default function Proyecto({ titulo, imagen, link, logos  }) {
   }
 
   return (
-    <div className={grid(titulo) + " mt-10 md:m-0 proyecto-container transition contenedorCard"} >
+    <div className={grid(titulo) + "mt-10 md:m-0 proyecto-container transition contenedorCard"} >
       <a
         href={link}
         target="_blank"
