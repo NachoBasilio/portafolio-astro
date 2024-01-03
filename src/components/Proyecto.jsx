@@ -26,7 +26,7 @@ export default function Proyecto({ titulo, imagen, link, logos  }) {
       <div className="titulo-proyecto grow h-80 m-auto">
         <h3 className="text-xl m-auto pt-2  tracking-wider">{titulo}</h3>
       </div>
-      <hr class="h-px bg-gray-200 border-0 dark:bg-gray-800"/>
+      <hr className="h-px bg-gray-200 border-0 dark:bg-gray-800"/>
       <div className="imagen-proyectos m-auto rounded-b bg-zinc-100 dark:bg-zinc-800 h-20" style={divStyle}></div>
       </a>
       <div className="logos">
