@@ -1,21 +1,24 @@
----
----
-<div class="m-auto container md:mt-20 flex flex-col gap-4 mb-10 md:w-1/2 bg-aguara-800 p-10 rounded-md overflow-hidden transform transition-transform hover:scale-105 relative">
-    <h2 class="text-4xl dark:text-zinc-100 text-center font-bold absolute inset-x-0 top-4">¡Contactemos!</h2>
+<div class="m-auto container md:mt-20 flex flex-col gap-4 mb-10 md:w-1/2 p-10 rounded-md overflow-hidden transform transition-transform hover:scale-105 relative dark:bg-gray-800 bg-white border-4 border-aguara-800">
+
+    <h2 class="text-4xl text-center font-bold absolute inset-x-0 top-4 dark:text-zinc-100">¡Contactanos!</h2>
     <div class="info hidden mt-10 transition-all duration-300 ease-in-out">
-        <h1 class="text-xl dark:text-zinc-100 text-center"><strong>Mi Nombre:</strong> Ignacio Basilio</h1>
-        <p class="text-xl dark:text-zinc-100 text-center"><strong>Email:</strong> ignacio.n.basilio.b@gmail.com</p>
-        <a class="text-xl dark:text-zinc-100 text-center hover:text-aguara-500" href="https://www.linkedin.com/in/ignacio-nicolas-basilio-buracco/"><strong>LinkedIn</strong></a>     
+        <h1 class="text-xl text-center dark:text-zinc-100"><strong>Mi Nombre:</strong> Ignacio Basilio</h1>
+        <p class="text-xl text-center dark:text-zinc-100"><strong>Email:</strong> ignacio.n.basilio.b@gmail.com</p>
+        <a class="text-xl text-center hover:text-aguara-500 dark:text-zinc-100" href="https://www.linkedin.com/in/ignacio-nicolas-basilio-buracco/"><strong>LinkedIn</strong></a>     
     </div>
+
+    <style>
+        .hover\:scale-105:hover .info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .info {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    </style>
 </div>
-<style>
-    .hover\:scale-105:hover .info {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        opacity: 1;
-        transform: translateY(0);
-    }
-</style>
-
-
